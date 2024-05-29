@@ -33,6 +33,7 @@ namespace job_candidates.Models
         [Url]
         public string GitHubProfile { get; set; }
 
+        [Required]
         [StringLength(500)]
         public string Comment { get; set; }
     }
