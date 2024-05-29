@@ -22,7 +22,7 @@ This is a web API for storing and updating job candidate information.
 
 The application uses SQL Server LocalDB. The connection string is provided in `appsettings.json`. The database will be created and updated automatically.
 
-## Testing
+## Testing Api
 
 Use tools like Postman or Swagger to test the API endpoints.
 
