@@ -17,10 +17,6 @@ namespace CandidateApi.Controllers
         private readonly IValidator<CandidateDto> _validator;
         private ApplicationDbContext _context;
 
-        public CandidatesController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
 
         public CandidatesController(ICandidateService candidateService, IValidator<CandidateDto> validator)
         {
