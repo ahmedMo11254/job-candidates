@@ -4,6 +4,7 @@ using CandidateApi.Services;
 using CandidateApi.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace job_candidates
 {
@@ -43,7 +44,18 @@ namespace job_candidates
 
 
             app.MapControllers();
-
+            using var scope = app.Services.CreateScope();
+            var servicces = scope.ServiceProvider;
+            try
+            {
+                var context = servicces.GetRequiredService<ApplicationDbContext>();
+                context.Database.MigrateAsync();
+            }
+            catch (Exception ex)
+            {
+                var logger = servicces.GetService<ILogger<Program>>();
+                logger.LogError(ex, "An error occurred during migration");
+            }
             app.Run();
         }
     }
