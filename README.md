@@ -6,7 +6,7 @@ This is a web API for storing and updating job candidate information.
 
 1. Clone the repository:
     ```sh
-    git clone <your-repo-url>
+    git clone https://github.com/ahmedMo11254/job-candidates.git
     ```
 
 2. Navigate to the project directory:
@@ -38,3 +38,9 @@ Use tools like Postman or Swagger to test the API endpoints.
 ## Improvements
 
 - Add more detailed validation and error handling.
+
+## Unit Testing
+To run the unit tests, navigate to the test project directory and run:
+```sh
+cd CandidateApi.Tests
+dotnet test
