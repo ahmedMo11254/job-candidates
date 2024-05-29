@@ -18,20 +18,20 @@ namespace job_candidates.Models
         public string LastName { get; set; }
 
         [Phone]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
         [Required]
         [EmailAddress]
         public string Email { get; set; }
 
         [StringLength(50)]
-        public string PreferredCallTime { get; set; }
+        public string? PreferredCallTime { get; set; }
 
         [Url]
-        public string LinkedInProfile { get; set; }
+        public string? LinkedInProfile { get; set; }
 
         [Url]
-        public string GitHubProfile { get; set; }
+        public string? GitHubProfile { get; set; }
 
         [Required]
         [StringLength(500)]
