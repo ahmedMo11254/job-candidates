@@ -12,6 +12,10 @@ This is a web API for storing and updating job candidate information.
 - Add more detailed validation and error handling.
 - Extend the API to support additional operations like deleting a candidate or retrieving a list of candidates.
 - Implement logging for better tracking of operations and issues.
+  
+## Database Setup
+
+- The application uses SQL Server LocalDB. The connection string is provided in `appsettings.json`. The database will be created and updated automatically.
 
 ## Setup
 1. Clone the repository:
