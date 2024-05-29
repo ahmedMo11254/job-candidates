@@ -32,7 +32,8 @@ namespace CandidateApi.Validators
                 .WithMessage("Invalid GitHub profile URL.")
                 .When(x => !string.IsNullOrEmpty(x.GitHubProfile));
 
-            RuleFor(x => x.Comment)
+            RuleFor(x => x.Comment).NotEmpty()
+                .WithMessage("Comment is required.")
                 .MaximumLength(500).WithMessage("Comment cannot exceed 500 characters.");
         }
     }
