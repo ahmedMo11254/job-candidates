@@ -35,5 +35,5 @@ This is a web API for storing and updating job candidate information.
 ## Testing
 To run the unit tests, navigate to the test project directory and run:
 ```sh
-cd CandidateApi.Tests
+cd TestCandidate
 dotnet test
